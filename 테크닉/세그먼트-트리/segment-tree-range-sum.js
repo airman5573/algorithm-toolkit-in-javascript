@@ -4,6 +4,7 @@ class SegmentTreeSum {
     this.tree = new Array(numArr.length * 4); // 최대 길이가 배열길이 x 4보다는 작다.
     this.build();
   }
+  
   build() {
     const _build = (node, range) => {
       const [left, right] = range;
@@ -19,6 +20,7 @@ class SegmentTreeSum {
     };
     _build(0, [0, this.numArr.length - 1]);
   }
+
   getSum(section) {
     const _getSum = (node, range) => {
       const [left, right] = range;
@@ -39,6 +41,7 @@ class SegmentTreeSum {
     const [sectionLeft, sectionRight] = section;
     return _getSum(0, [0, this.numArr.length-1]);
   }
+
   update(index, value) {
     const diff = value - this.numArr[index];
     this.numArr[index] = value;
