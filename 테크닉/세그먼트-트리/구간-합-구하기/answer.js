@@ -1,4 +1,4 @@
-// segment-tree-range-sum.js 파일의 SegmentTree class를 가져다 사용했다
+import SegmentTreeSum from '../segment-tree-range-sum';
 
 let fs = require('fs');
 let input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
