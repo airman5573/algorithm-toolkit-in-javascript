@@ -1,4 +1,4 @@
-import SegmentTreeSum from '../segment-tree-range-sum';
+import SegmentTreeSum from '../segment-tree-sum';
 
 let fs = require('fs');
 let input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
@@ -14,6 +14,6 @@ for (let i = N + 1; i < N + M + K + 1; i += 1) {
   if (a === CHANGE) {
     segmentTree.update(b - 1, c);
   } else {
-    console.log(segmentTree.getSum([b-1, c-1])); 
+    console.log(segmentTree.query([b-1, c-1])); 
   }
 }
