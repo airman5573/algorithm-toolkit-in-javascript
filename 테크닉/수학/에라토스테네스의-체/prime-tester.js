@@ -8,15 +8,13 @@ function getPrimeTester(n) {
   }
   // 1은 소수가 아니기 때문에, 2부터 조사한다
   // n의 제곱근까지만 루프를 돌아도 되는 이유는 REAME.md를 참고한다
-  for (let i = 2; i < parseInt(n ** 0.5) + 1; i += 1) {
+  for (let i = 2; i < parseInt(n ** 0.5, 10) + 1; i += 1) {
     if (tester[i]) {
       // 위에서 n = n + 1을 해주었기 때문에, n은 포함 안시켜도 된다.
-      for (let j = 2; j < n; j += 1) {
-        tester[i * j] = IM_NOT_PRIME;
+      for (let j = i * i; j < n; j += i) {
+        tester[j] = IM_NOT_PRIME;
       }
     }
   }
   return tester;
 }
-
-export default getPrimeTester;
