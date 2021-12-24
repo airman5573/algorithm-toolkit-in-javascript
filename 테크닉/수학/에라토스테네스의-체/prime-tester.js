@@ -1,4 +1,4 @@
-function getPrimeTester(n) {
+function generatePrimeTester(n) {
   const [IM_PRIME, IM_NOT_PRIME] = [1, 0];
   // 에라토스테네스의 체 초기화: n개 요소에 True 설정(소수로 간주)
   n = n + 1 // 이렇게 하면 소수목록에서 조회할때 index - 1 안해줘도 된다
@@ -18,3 +18,5 @@ function getPrimeTester(n) {
   }
   return tester;
 }
+
+export default generatePrimeTester;
