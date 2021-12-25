@@ -13,6 +13,9 @@ class PriorityQueue {
   isEmpty() {
     return this.size() == 0;
   }
+  heap() {
+    return [...this._heap];
+  }
   peek() {
     return this._heap[PriorityQueue.TOP];
   }
@@ -64,14 +67,15 @@ class PriorityQueue {
   _siftDown() {
     let node = PriorityQueue.TOP;
     const size = this.size();
-    while (true) {
-      const [leftChild, rightChild] = [this._leftChild(node), this._rightChild(node)];
-      if (leftChild >= size && rightChild >= size) {
-        break;
-      }
-      let maxChild = leftChild;
-      if (rightChild < size && this._greater(rightChild, leftChild)) {
-        maxChild = rightChild;
+    // 둘중 하나만 있다고 하면, leftChild만 있을것이다.
+    // left부터 값이 차기 때문이다.
+    while (
+      (this._leftChild(node) < size && this._greater(this._leftChild(node), node)) ||
+      (this._rightChild(node) < size && this._greater(this._rightChild(node), node))
+    ) {
+      let maxChild = this._leftChild(node);
+      if (this._rightChild(node) < size && this._greater(this._rightChild(node), this._leftChild(node))) {
+        maxChild = this._rightChild(node);
       }
       this._swap(node, maxChild);
       node = maxChild;
