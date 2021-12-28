@@ -6,3 +6,9 @@
 ## 코드 구현
 ### 구간합을 구하는 경우
 [segment-tree-sum.js](./segment-tree-sum.js)
+
+### 구간에서의 최소값을 구하는 경우
+[segment-tree-min.js](./segment-tree-min.js)
+
+### 구간에서의 최대값을 구하는 경우
+[segment-tree-max.js](./segment-tree-max.js)
