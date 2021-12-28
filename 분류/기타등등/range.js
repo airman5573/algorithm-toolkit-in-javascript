@@ -1,5 +1,5 @@
 function range(_from, to) {
-  let N = to, i = _from, arr = Array(N);
+  let N = to + 1, i = _from, arr = Array(N);
   while (i < N) {
     arr[i++] = i;
   }
