@@ -116,6 +116,7 @@
 - 대각선 방향으로 움직이면서 꼭지점 까지 가기
 - 행과 열 바꾸기
 - [Spiral Matrix](./분류/브루트포스_시뮬레이션/Spiral-Matrix/README.md)
+- [Cyclically Rotating a Grid](./분류/브루트포스_시뮬레이션/Cyclically-Ratating-Grid/README.md)
 
 ## 분할정복
 - 별 찍기 - 10
