@@ -48,10 +48,6 @@ class Dijkstra {
     }
     return this;
   }
-
-  moveInfo(start, end, distance) {
-    return { s: start, e: end, d: distance };
-  }
 }
 
 export default Dijkstra;
