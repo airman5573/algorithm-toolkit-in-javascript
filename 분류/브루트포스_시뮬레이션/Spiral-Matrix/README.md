@@ -1,4 +1,4 @@
-# 구간 합 구하기
+# Spiral Matrix
 ## 문제
 [Leetcode - 54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
 
