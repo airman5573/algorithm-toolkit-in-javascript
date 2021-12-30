@@ -74,6 +74,7 @@
   - 움직이는 미로 탈출
   - 퍼즐
   - 열쇠
+  - [Number of Islands](./분류/탐색/BFS/Number-of-Islands/README.md)
 - [다익스트라](./분류/탐색/다익스트라/README.md)
   - [최소비용 구하기](분류/탐색/다익스트라/최소비용-구하기/README.md)
   - 도로포장
